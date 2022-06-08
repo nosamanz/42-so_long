@@ -30,7 +30,11 @@ void	foe_move(t_data *data, int i, int j)
 void	foe_move2(t_data *data, int i, int j)
 {
 	while (data->map.map[i][j - 1] != '1')
+	{
+		if (data->map.map[i][j - 1] == 'E')
+			break ;
 		j--;
+	}
 	if (data->map.map[i][j] == 'P')
 	{
 		ft_putstr_fd(RED"-GAME OVER-\n", 1);
