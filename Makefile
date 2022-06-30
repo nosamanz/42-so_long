@@ -1,5 +1,5 @@
 CC = gcc
-FLAGS = -framework OpenGL -framework AppKit -L./minilibx -lmlx -glldb
+FLAGS = -framework OpenGL -framework AppKit -L./minilibx -lmlx -Wall -Wextra -Werror
 NAME = so_long
 SRCS = get_next_line/*.c libft/*.c Errors/*.c Events/*.c Graphics/*.c Init/*.c *.c
 INCLUDES = Includes/*.h
@@ -10,9 +10,6 @@ all:
 	@$(CC) $(SRCS) -o $(NAME) $(FLAGS)
 	@echo "\033[1;32m     [OK]"
 
-%.o: %.c
-	$(CC) -Wall -Wextra -Werror -Imlx
-	$(FLAGS)
 
 clean:
 	@echo "\033[1;35m[🧹Cleaning...🧹]"
