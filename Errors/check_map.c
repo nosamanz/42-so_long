@@ -79,8 +79,8 @@ int	check_rectangle(t_data *data)
 
 int	check_map(t_data *data)
 {
-	int		i;
-	int		j;
+	int					i;
+	unsigned long int	j;
 
 	i = 0;
 	j = 0;
